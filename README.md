@@ -7,4 +7,4 @@ Props an "RK" für die soundfiles!
 
 nutzt pip für die externe Bibliothek:
 
->>> pip install pydub
+> pip install pydub
