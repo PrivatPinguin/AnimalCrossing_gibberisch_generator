@@ -29,14 +29,14 @@ def generate_audio_from_string(input_string: str):
     """
     Transferiert einen Text in "AnimalCrossing" gibberisch
     """
-    input_string = input_string.lower().replace(" ", "_")[:20]
-    output_file = f"{input_string}.mp3"
+    input_string = input_string.lower().replace(" ", "_")
+    output_file = f"{input_string[:20]}.mp3"
     combined_audio = AudioSegment.silent(duration=0)
     silence = AudioSegment.silent(duration=3)  # ms Stille
     long_silence = AudioSegment.silent(duration=170)  #  ms Stille für "_"
     long_silence_dot = AudioSegment.silent(duration=300)  #  ms Stille für "_"
     
-    input_string.replace('v', 'f').replace('y', 'j')
+    input_string = input_string.replace('v', 'f').replace('y', 'j')
 
     for char in input_string:
         if 'a' <= char <= 'z':
